@@ -1,0 +1,39 @@
+{
+  "conto": "02788",
+  "intestatari": ["Tufo P.", "Basso E."],
+
+  "titoli": [
+    { "nome": "BTP ITALIA OT28 EUR", "qta": 25000, "prezzo_rif": 100.95, "var": -0.01, "valore_rif": 25237, "valore_acq": 25010 },
+    { "nome": "BTP 01.08.27 3,75pc", "qta": 20000, "prezzo_rif": 101.70, "var": 0.01, "valore_rif": 20340, "valore_acq": 20095 },
+    { "nome": "BTP ITALIA NV26", "qta": 15000, "prezzo_rif": 104.55, "var": 0.14, "valore_rif": 15683, "valore_acq": 15000 },
+    { "nome": "BTP ITALIA AP28 EUR", "qta": 20000, "prezzo_rif": 101.23, "var": -0.03, "valore_rif": 20246, "valore_acq": 20020 },
+    { "nome": "BTP ITALIA AP27 EUR", "qta": 20000, "prezzo_rif": 100.06, "var": -0.14, "valore_rif": 20012, "valore_acq": 20000 },
+    { "nome": "BTP 01.05.27 3,75pc", "qta": 10000, "prezzo_rif": 106.64, "var": -0.03, "valore_rif": 10664, "valore_acq": 10350 },
+    { "nome": "BTP-01DC28 2,15pc", "qta": 10000, "prezzo_rif": 104.24, "var": -0.03, "valore_rif": 10424, "valore_acq": 10070 },
+    { "nome": "BTP 15.04.28 1,35pc", "qta": 20000, "prezzo_rif": 103.90, "var": null, "valore_rif": 20780, "valore_acq": 20240 },
+    { "nome": "BTPI 15.09.28 2,1pc", "qta": 25000, "prezzo_rif": 105.40, "var": 0.02, "valore_rif": 26350, "valore_acq": 25044 },
+    { "nome": "BTP 01.04.30 1,35pc", "qta": 15000, "prezzo_rif": 104.50, "var": 0.02, "valore_rif": 15675, "valore_acq": 15140 },
+    { "nome": "BTP 1.45-01MZ36", "qta": 20000, "prezzo_rif": 103.00, "var": 0.00, "valore_rif": 20600, "valore_acq": 20600 },
+    { "nome": "BTP Futura Lg30", "qta": 50000, "prezzo_rif": 100.00, "var": 0.00, "valore_rif": 50000, "valore_acq": 50000 },
+
+    { "nome": "Cct-Eu Tv Eur6m+0,55% Gn26", "qta": 10000, "prezzo_rif": 100.44, "var": null, "valore_rif": 10044, "valore_acq": 9975 },
+    { "nome": "Cct-Eu Tv Eur6m+0,7% Dc26", "qta": 10000, "prezzo_rif": 100.28, "var": null, "valore_rif": 10028, "valore_acq": 9900 },
+    { "nome": "Cct-Eu Tv Eur6m+0,7% Lg27", "qta": 10000, "prezzo_rif": 100.31, "var": null, "valore_rif": 10031, "valore_acq": 9980 },
+    { "nome": "Cct-Eu Tv Eur6m+0,75% Fb27", "qta": 10000, "prezzo_rif": 100.40, "var": null, "valore_rif": 10040, "valore_acq": 9915 },
+    { "nome": "Cct-Eu Tv Eur6m+1,10% Ot26", "qta": 5000, "prezzo_rif": 101.51, "var": null, "valore_rif": 5076, "valore_acq": 4950 },
+    { "nome": "Cct-Eu Tv Eur6m+1,85% Ge27", "qta": 15000, "prezzo_rif": 103.24, "var": null, "valore_rif": 15486, "valore_acq": 15241 }
+  ],
+
+  "riepilogo": {
+    "totale_qta": 310000,
+    "totale_valore_rif": 317046,
+    "totale_valore_acq": 311515,
+    "liquidita": 1034,
+    "disponibilita": 318080,
+
+    "categorie": [
+      { "nome": "CCT", "qta": 60000, "valore": 60705 },
+      { "nome": "BTP", "qta": 250000, "valore": 256341 }
+    ]
+  }
+}

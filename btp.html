@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<title>BTP</title>
+<link rel="stylesheet" href="css/style.css">
+<script src="js/common.js"></script>
+</head>
+<body>
+<div class="page">
+
+<header>
+  <div class="logo">DirectaConto</div>
+  <div class="user-info" id="userInfo"></div>
+</header>
+
+<nav class="navbar">
+  <a href="riepilogo.html">Riepilogo</a>
+  <a href="btp.html" class="active">BTP</a>
+  <a href="cct.html">CCT</a>
+  <a href="index.html" class="logout">Logout</a>
+</nav>
+
+<section class="card">
+  <div class="card-title">Posizioni – BTP</div>
+
+  <table id="btpTable">
+    <thead>
+      <tr>
+        <th>Titolo</th>
+        <th>Qta</th>
+        <th>Prezzo rif.</th>
+        <th>Var %</th>
+        <th>Valore rif.</th>
+        <th>Valore acq.</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+</section>
+
+</div>
+
+<script>
+loadJSON(data => {
+  document.getElementById("userInfo").textContent =
+    `Conto ${data.conto} · ${data.intestatari.join(" · ")}`;
+
+  const tbody = document.querySelector("#btpTable tbody");
+
+  data.titoli.filter(t => t.nome.startsWith("BTP")).forEach(t => {
+    const cls = t.var > 0 ? "pos" : (t.var < 0 ? "neg" : "");
+    const tr = document.createElement("tr");
+    tr.innerHTML = `
+      <td>${t.nome}</td>
+      <td>${t.qta.toLocaleString("it-IT")}</td>
+      <td>${t.prezzo_rif.toFixed(2)}</td>
+      <td class="${cls}">${perc(t.var)}</td>
+      <td>${euro(t.valore_rif)}</td>
+      <td>${euro(t.valore_acq)}</td>
+    `;
+    tbody.appendChild(tr);
+  });
+});
+</script>
+
+</body>
+</html>

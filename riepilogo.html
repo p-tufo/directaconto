@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<title>Riepilogo</title>
+<link rel="stylesheet" href="css/style.css">
+<script src="js/common.js"></script>
+</head>
+<body>
+<div class="page">
+
+<header>
+  <div class="logo">DirectaConto</div>
+  <div class="user-info" id="userInfo"></div>
+</header>
+
+<nav class="navbar">
+  <a href="riepilogo.html" class="active">Riepilogo</a>
+  <a href="btp.html">BTP</a>
+  <a href="cct.html">CCT</a>
+  <a href="index.html" class="logout">Logout</a>
+</nav>
+
+<section class="card">
+  <div class="card-title">Riepilogo portafoglio</div>
+
+  <div id="metrics"></div>
+
+  <table id="riepilogoTable">
+    <thead>
+      <tr>
+        <th>Categoria</th>
+        <th>Quantità</th>
+        <th>Valore €</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+</section>
+
+</div>
+
+<script>
+loadJSON(data => {
+  document.getElementById("userInfo").textContent =
+    `Conto ${data.conto} · ${data.intestatari.join(" · ")}`;
+
+  document.getElementById("metrics").innerHTML = `
+    <p><b>Valore titoli:</b> ${euro(data.riepilogo.totale_valore_rif)}</p>
+    <p><b>Liquidità:</b> ${euro(data.riepilogo.liquidita)}</p>
+    <p><b>Disponibilità:</b> ${euro(data.riepilogo.disponibilita)}</p>
+  `;
+
+  const tbody = document.querySelector("#riepilogoTable tbody");
+
+  data.riepilogo.categorie.forEach(c => {
+    const tr = document.createElement("tr");
+    tr.innerHTML = `
+      <td>${c.nome}</td>
+      <td>${c.qta.toLocaleString("it-IT")}</td>
+      <td>${euro(c.valore)}</td>
+    `;
+    tbody.appendChild(tr);
+  });
+});
+</script>
+
+</body>
+</html>
