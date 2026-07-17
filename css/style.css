@@ -127,6 +127,10 @@ tr:nth-child(even) td {
   margin-bottom: 12px;
   border-radius: 8px;
   border: 1px solid var(--border);
+  max-width: 260px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
 }
 
 .login-container button {
